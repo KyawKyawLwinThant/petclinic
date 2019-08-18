@@ -32,4 +32,8 @@ public class Speciality extends NameEntity {
   public void setVets(List<Vet> vets) {
     this.vets = vets;
   }
+  @Override
+  public String toString(){
+    return super.getName();
+  }
 }

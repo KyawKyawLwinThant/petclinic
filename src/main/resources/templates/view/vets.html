@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="./layout/viewlayout.html">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+</head>
+<body>
+    <div layout:fragment="context">
+        <div class="container">
+        <table class="table">
+            <thead class="table-dark text-light">
+            <tr>
+                <th>FirstName</th>
+                <th>LastName</th>
+                <th>Specialities</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="vet :${vets}">
+                <td th:text="${vet.firstName}"></td>
+                <td th:text="${vet.lastName}"></td>
+                <td th:text="${vet.specialities}"></td>
+            </tr>
+            </tbody>
+        </table>
+        </div>
+    </div>
+
+</body>
+</html>
