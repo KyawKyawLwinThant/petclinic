@@ -32,6 +32,6 @@ public class VetServiceImpl implements VetService {
 
   @Override
   public Vet searchVetLastName(String name) {
-    return vetRepository.findByLastName(name);
+    return vetRepository.findByLastName(name).orElse(null);
   }
 }

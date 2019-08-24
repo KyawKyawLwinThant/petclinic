@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="./layout/viewlayout.html">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+</head>
+<body>
+    <div layout:fragment="context">
+
+        <div class="container">
+
+            <h1 class="text-center text-danger">Error Page</h1>
+            <p th:text="${exception}"></p>
+            <p th:text="${url}"></p>
+            <p th:text="${message}"></p>
+        </div>
+
+    </div>
+</body>
+</html>
