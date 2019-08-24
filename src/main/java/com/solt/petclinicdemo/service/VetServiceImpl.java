@@ -29,4 +29,9 @@ public class VetServiceImpl implements VetService {
   public List<Vet> findAll() {
     return this.vetRepository.findAll();
   }
+
+  @Override
+  public Vet searchVetLastName(String name) {
+    return vetRepository.findByLastName(name);
+  }
 }

@@ -15,6 +15,7 @@
                 <th>FirstName</th>
                 <th>LastName</th>
                 <th>Specialities</th>
+                <th>Details</th>
             </tr>
             </thead>
             <tbody>
@@ -22,6 +23,7 @@
                 <td th:text="${vet.firstName}"></td>
                 <td th:text="${vet.lastName}"></td>
                 <td th:text="${vet.specialities}"></td>
+                <td><a href="#" th:href="@{'/vet/'+${vet.id}}" class="btn btn-primary">Details</a></td>
             </tr>
             </tbody>
         </table>

@@ -10,5 +10,5 @@ public interface VetService {
   Vet findById(long id);
   List<Vet> findAll();
 
-
+  Vet searchVetLastName(String name);
 }
