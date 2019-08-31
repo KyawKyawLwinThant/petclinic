@@ -5,7 +5,6 @@ import lombok.Data;
 import javax.persistence.Entity;
 
 @Entity
-
 public class Owner extends Person{
 
   private String address;

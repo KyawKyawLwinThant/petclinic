@@ -28,7 +28,7 @@ public class VetController {
 
   @GetMapping("/home")
   public String home(){
-    return "layout/viewlayout";
+    return "view/ownerForm";
   }
 
   @GetMapping("/findvet")

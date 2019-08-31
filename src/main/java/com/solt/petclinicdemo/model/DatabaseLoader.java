@@ -29,7 +29,7 @@ public class DatabaseLoader implements CommandLineRunner {
     Vet vet5=new Vet("Hlaing","Hlaing");
 
     //mapping
-    vet1.addSepciality(sp1);
+   /* vet1.addSepciality(sp1);
     vet1.addSepciality(sp4);
     sp1.getVets().add(vet1);
     sp4.getVets().add(vet1);
@@ -46,7 +46,7 @@ public class DatabaseLoader implements CommandLineRunner {
     sp4.getVets().add(vet4);
 
     vet5.addSepciality(sp1);
-    sp1.getVets().add(vet5);
+    sp1.getVets().add(vet5);*/
 
     //persist
    /* specialityService.create(sp1);
