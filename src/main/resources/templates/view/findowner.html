@@ -9,11 +9,11 @@
 <body>
         <div layout:fragment="context">
             <div class="container">
-                <form action="#">
+                <form action="#" th:action="@{/find}">
                     <div class="form-group row mt-4">
                         <label for="lastname" class="col-sm-2 col-form-label">Last Name</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" id="lastname" placeholder="Last Name">
+                            <input type="text" name="lastName" class="form-control" id="lastname" placeholder="Last Name">
                         </div>
                     </div>
                     <div class="from-group row mt-3">

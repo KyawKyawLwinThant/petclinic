@@ -17,6 +17,7 @@
                     <th>City</th>
                     <th>Address</th>
                     <th>Telephone</th>
+                    <th>Add Pet</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -26,6 +27,7 @@
                     <td th:text="${owner.city}"></td>
                     <td th:text="${owner.address}"></td>
                     <td th:text="${owner.telephone}"></td>
+                    <td><a href="#" th:href="@{'/addpet/'+ ${owner.id}}">Add Pet</a> </td>
                 </tr>
                 </tbody>
             </table>

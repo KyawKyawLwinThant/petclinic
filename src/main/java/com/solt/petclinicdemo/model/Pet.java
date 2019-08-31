@@ -11,7 +11,6 @@ import javax.persistence.ManyToOne;
 import java.time.LocalDate;
 
 @Entity
-
 public class Pet extends NameEntity {
   @Enumerated(EnumType.STRING)
   private PetType petType;

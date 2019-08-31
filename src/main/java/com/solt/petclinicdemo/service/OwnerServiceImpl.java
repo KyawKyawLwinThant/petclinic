@@ -1,7 +1,9 @@
 package com.solt.petclinicdemo.service;
 
 import com.solt.petclinicdemo.model.Owner;
+import com.solt.petclinicdemo.model.Pet;
 import com.solt.petclinicdemo.repository.OwnerRepository;
+import com.solt.petclinicdemo.repository.PetRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -10,9 +12,11 @@ import java.util.List;
 public class OwnerServiceImpl implements OwnerService {
 
   private final OwnerRepository ownerRepository;
+  private final PetRepository petRepository;
 
-  public OwnerServiceImpl(OwnerRepository ownerRepository) {
+  public OwnerServiceImpl(OwnerRepository ownerRepository,PetRepository petRepository) {
     this.ownerRepository = ownerRepository;
+    this.petRepository = petRepository;
   }
 
   @Override
@@ -28,5 +32,17 @@ public class OwnerServiceImpl implements OwnerService {
   @Override
   public List<Owner> findAll() {
     return ownerRepository.findAll();
+  }
+
+  @Override
+  public Pet addPet(Pet pet, long ownerId) {
+    pet.setOwner(findById(ownerId));
+    this.petRepository.save(pet);
+    return pet;
+  }
+
+  @Override
+  public Owner searchByLastName(String lastName) {
+    return ownerRepository.findByLastName(lastName);
   }
 }

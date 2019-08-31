@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="./layout/viewlayout.html">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+</head>
+<body>
+    <div layout:fragment="context">
+        <div class="container">
+            <form action="#" th:action="@{/addpet}" th:object="${pet}" method="post">
+
+                <div class="form-group row mt-5">
+                    <label for="name" class="col-sm-2 col-form-label">Name</label>
+                    <div class="col-sm-10">
+                        <input type="text" th:field="*{name}" class="form-control" id="name" placeholder="Name">
+                    </div>
+                </div>
+
+
+                <div class="form-group row">
+                    <lable for="petype" class="col-sm-2 col-form-label">Pet Type</lable>
+                    <div class="col-sm-10">
+                        <select name="roomtype" id="petype" th:field="*{petType}" class="form-control">
+                            <option th:each="petType:${T(com.solt.petclinicdemo.model.PetType).values()}"
+                                    th:value="${{petType}}" th:text="${petType}"></option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group row mt-5">
+                    <label for="dob" class="col-sm-2 col-form-label">Date Of Birth</label>
+                    <div class="col-sm-10">
+                        <input type="date" th:field="*{dateofbirth}" class="form-control" id="dob" placeholder="Date of birth">
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Submit</button>
+
+            </form>
+
+        </div>
+    </div>
+</body>
+</html>
