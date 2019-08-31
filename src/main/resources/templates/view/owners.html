@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="./layout/viewlayout.html">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+</head>
+<body>
+        <div layout:fragment="context">
+            <div class="container">
+            <table class="table">
+                <thead class="table-dark">
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>City</th>
+                    <th>Address</th>
+                    <th>Telephone</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="owner : ${owners}">
+                    <td th:text="${owner.firstName}"></td>
+                    <td th:text="${owner.lastName}"></td>
+                    <td th:text="${owner.city}"></td>
+                    <td th:text="${owner.address}"></td>
+                    <td th:text="${owner.telephone}"></td>
+                </tr>
+                </tbody>
+            </table>
+            </div>
+        </div>
+</body>
+</html>
